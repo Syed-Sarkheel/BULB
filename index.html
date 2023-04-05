@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulb</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <marquee behavior="alternate" direction="right" >Bulb Turn On/Off</marquee>
+    <div class="off">
+    <img src="./pngwing1.com.png" alt="bulb-off" id="off">
+    <button id="turnOn">
+        turn-off
+    </button>
+</div>
+    <script>
+        let img = document.getElementById('off');
+        let btn = document.getElementById('turnOn');
+        // console.log(img + btn)
+        btn.addEventListener('click',switches)
+        function switches(e){
+            if(btn.textContent.includes('off')){
+                // img.setAttribute('src',"https://cdn1.vectorstock.com/i/1000x1000/90/20/light-bulb-vector-579020.jpg")
+                img.src = './pngwing.com.png'
+                btn.textContent = 'turn-on'
+                document.body.style.backgroundColor = 'black'
+                btn.style.backgroundColor = 'yellow'
+        }else{
+            
+            img.setAttribute('src',"./pngwing1.com.png")
+            btn.textContent = 'turn-off'     
+            document.body.style.backgroundColor = 'white'
+            btn.style.backgroundColor = 'white'
+        
+            }
+    }
+
+    </script>
+</body>
+</html>
